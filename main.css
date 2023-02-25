@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,100;1,400;1,500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    background-color: rgb(0, 0, 29);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+  
+/* nav bar lay out */
+nav ul {
+    display: block;
+    margin: 0;
+    padding: 10px 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    transition:0.5s;
+}
+
+/* place div items next to eachother */
+nav ul div {
+    text-transform: uppercase;
+    padding: 24px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    display: flex;
+    gap: 15px;
+    font-size: 16px;
+}
+/* make gap between middle section bigger */
+nav ul div:nth-of-type(2) {
+    gap: 60px;
+}
+
+nav ul div li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul div li a {
+    text-decoration: none;
+    color: white;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+  
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.5s ease-out;
+}
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.container {
+    width: 40%;
+    margin: 30px auto;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+section {
+    padding: 30px;
+    background-color: #f1f8fa28;
+}
+
+section p {
+    margin-bottom: 25px;
+}
+
+section a {
+    color: aquamarine;
+    font-weight: 700;
+    transition: 1s;
+}
+
+section a span {
+    transition: .5s;
+}
+
+div a:hover {
+    cursor: pointer;
+}
+
+a:hover span {
+    margin-left: 10px;
+}
+
+img {
+    width: 300px;
+    background-color: aquamarine;
+    border-radius: 50%;
+}
+
+.work {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.grid_container {
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 75vh;
+}
+
+.grid_container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: rgba(168, 168, 168, 0.418);
+}
+
+embed {
+    background-color: white;
+}
+
+.work li {
+    text-align: left;
+}
+
+
+/* CSS */
+.button-52 {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(0, 0, 29);
+  font-style: italic;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 2px solid white;
+  cursor: pointer;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 250px;
+  margin: 50px auto;
+  margin-bottom: 0;
+}
+
+.button-52:after {
+  content: "";
+  background-color: aquamarine;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.contact {
+    margin: 100px auto;
+    text-align: center;
+    width: 80%;
+}
+
+.contact div a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .button-52 {
+    padding: 13px 50px 13px;
+  }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 500px;
+    margin: 100px auto;
+}
+
+input, textarea {
+    display: block;
+    border: none;
+    background-color: lightgray;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    width: 100px;
+    background-color: aquamarine;
+    font-weight: 600;
+    transition: .5s;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.1);
+}
